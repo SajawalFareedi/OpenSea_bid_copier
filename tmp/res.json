@@ -1,0 +1,2224 @@
+{
+    "data": {
+        "eventActivity": {
+            "edges": [
+                {
+                    "node": {
+                        "collection": {
+                            "name": "HV-MTL",
+                            "imageUrl": "https://i.seadn.io/gcs/files/82a7f92df6d60e41327b69cdafea8831.jpg?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "hv-mtl",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MjM5OTkwNTM="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjExMDkyNjQ5MDE=",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "25285",
+                            "assetContract": {
+                                "address": "0x4b15a9c28034dc83db40cd810001427d3bd7163d",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6OTE5NjcwMA==",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x4b15a9c28034dc83db40cd810001427d3bd7163d"
+                            },
+                            "tokenId": "25285",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/642d03f139f497fe0a6ef010ba7a34fa.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/642d03f139f497fe0a6ef010ba7a34fa.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "COVER"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MjM5OTkwNTM=",
+                                "slug": "hv-mtl",
+                                "enabledRarities": [],
+                                "name": "HV-MTL",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": null,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjExMDkyNjQ5MDE="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDY4OTc=",
+                        "eventTimestamp": "2023-03-31T01:16:23.548474",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "2.2",
+                            "eth": "2.2",
+                            "usd": "4009.1259999999998394"
+                        },
+                        "endingPriceType": {
+                            "unit": "2.2"
+                        },
+                        "priceType": {
+                            "unit": "2.2"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDY4OTc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxMzAxMzYyNw==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "69",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "69",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/f385cadcd7359078b5924dddafe30184.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/f385cadcd7359078b5924dddafe30184.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxMzAxMzYyNw=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDU2NDA=",
+                        "eventTimestamp": "2023-03-31T01:16:20.266491",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "22.126",
+                            "eth": "22.126",
+                            "usd": "40320.873579999998384802"
+                        },
+                        "endingPriceType": {
+                            "unit": "22.126"
+                        },
+                        "priceType": {
+                            "unit": "22.126"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDU2NDA="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Clothing",
+                            "value": "Cat Yukata",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNjgx"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDI0OTc=",
+                        "eventTimestamp": "2023-03-31T01:16:10.104609",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.0831",
+                            "eth": "13.0831",
+                            "usd": "23841.7256229999990449337"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.0831"
+                        },
+                        "priceType": {
+                            "unit": "13.0831"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDI0OTc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Offhand",
+                            "value": "Fireball",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNzUw"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDIyNTk=",
+                        "eventTimestamp": "2023-03-31T01:16:09.647668",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.6916",
+                            "eth": "13.6916",
+                            "usd": "24950.6134279999990005132"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.6916"
+                        },
+                        "priceType": {
+                            "unit": "13.6916"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDIyNTk="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxMzYwNDE0Nw==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "129",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "129",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/8a58c0f00db769540158adcd1fccd4b3.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/8a58c0f00db769540158adcd1fccd4b3.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxMzYwNDE0Nw=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDIwNjY=",
+                        "eventTimestamp": "2023-03-31T01:16:08.629095",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "22.1173",
+                            "eth": "22.1173",
+                            "usd": "40305.0193089999983854371"
+                        },
+                        "endingPriceType": {
+                            "unit": "22.1173"
+                        },
+                        "priceType": {
+                            "unit": "22.1173"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDIwNjY="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Eyes",
+                            "value": "Fire",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNTI2"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDE2MTk=",
+                        "eventTimestamp": "2023-03-31T01:16:06.276618",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.08338",
+                            "eth": "13.08338",
+                            "usd": "23842.23587539999904491326"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.08338"
+                        },
+                        "priceType": {
+                            "unit": "13.08338"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDE2MTk="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxMzY2NDA1NQ==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "68",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "68",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/a89f90ff009af9ddd6a63020fb66488a.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/a89f90ff009af9ddd6a63020fb66488a.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxMzY2NDA1NQ=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDEyNTg=",
+                        "eventTimestamp": "2023-03-31T01:16:04.248948",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "22.1252",
+                            "eth": "22.1252",
+                            "usd": "40319.4157159999983848604"
+                        },
+                        "endingPriceType": {
+                            "unit": "22.1252"
+                        },
+                        "priceType": {
+                            "unit": "22.1252"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDEyNTg="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Eyes",
+                            "value": "Lightning",
+                            "id": "VHJhaXRUeXBlOjI1NTEzOTcx"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDAzMzc=",
+                        "eventTimestamp": "2023-03-31T01:16:02.102028",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.0928",
+                            "eth": "13.0928",
+                            "usd": "23859.4022239999990442256"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.0928"
+                        },
+                        "priceType": {
+                            "unit": "13.0928"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5NDAzMzc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Eyes",
+                            "value": "Glowing",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNzc0"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzk1MDM=",
+                        "eventTimestamp": "2023-03-31T01:15:58.822298",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.0915",
+                            "eth": "13.0915",
+                            "usd": "23857.0331949999990443205"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.0915"
+                        },
+                        "priceType": {
+                            "unit": "13.0915"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzk1MDM="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Offhand",
+                            "value": "Water Orb",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNzQy"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzg3MjE=",
+                        "eventTimestamp": "2023-03-31T01:15:56.027437",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.6917",
+                            "eth": "13.6917",
+                            "usd": "24950.7956609999990005059"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.6917"
+                        },
+                        "priceType": {
+                            "unit": "13.6917"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzg3MjE="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxMjQxMDEyMg==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "85278",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "85278",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/cbd1d8f911e94e5f45f09133fe25264a.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/cbd1d8f911e94e5f45f09133fe25264a.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxMjQxMDEyMg=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzg2MDA=",
+                        "eventTimestamp": "2023-03-31T01:15:55.449201",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "2.8385",
+                            "eth": "2.8385",
+                            "usd": "5172.6837049999997927895"
+                        },
+                        "endingPriceType": {
+                            "unit": "2.8385"
+                        },
+                        "priceType": {
+                            "unit": "2.8385"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzg2MDA="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Offhand",
+                            "value": "Earth",
+                            "id": "VHJhaXRUeXBlOjI1NTEzODkw"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzgzOTI=",
+                        "eventTimestamp": "2023-03-31T01:15:54.573787",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.99078",
+                            "eth": "13.99078",
+                            "usd": "25495.81811739999897867306"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.99078"
+                        },
+                        "priceType": {
+                            "unit": "13.99078"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzgzOTI="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "HV-MTL",
+                            "imageUrl": "https://i.seadn.io/gcs/files/82a7f92df6d60e41327b69cdafea8831.jpg?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "hv-mtl",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MjM5OTkwNTM="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjExMTE0OTkwNjE=",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "25410",
+                            "assetContract": {
+                                "address": "0x4b15a9c28034dc83db40cd810001427d3bd7163d",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6OTE5NjcwMA==",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x4b15a9c28034dc83db40cd810001427d3bd7163d"
+                            },
+                            "tokenId": "25410",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/ea1d4ca9453f79e1bd64a1eec763dac4.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/ea1d4ca9453f79e1bd64a1eec763dac4.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "COVER"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MjM5OTkwNTM=",
+                                "slug": "hv-mtl",
+                                "enabledRarities": [],
+                                "name": "HV-MTL",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": null,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjExMTE0OTkwNjE="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzc4NDM=",
+                        "eventTimestamp": "2023-03-31T01:15:53.165190",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "2.2",
+                            "eth": "2.2",
+                            "usd": "4009.1259999999998394"
+                        },
+                        "endingPriceType": {
+                            "unit": "2.2"
+                        },
+                        "priceType": {
+                            "unit": "2.2"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5Mzc4NDM="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxNjg0NDg4MQ==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "127",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "127",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/5e7d5d4ba6bfde72d0531f53b9d8327d.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/5e7d5d4ba6bfde72d0531f53b9d8327d.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxNjg0NDg4MQ=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzcwMjg=",
+                        "eventTimestamp": "2023-03-31T01:15:51.879816",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "22.1097",
+                            "eth": "22.1097",
+                            "usd": "40291.1696009999983859919"
+                        },
+                        "endingPriceType": {
+                            "unit": "22.1097"
+                        },
+                        "priceType": {
+                            "unit": "22.1097"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzcwMjg="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Hat",
+                            "value": "M2 Bayc Hat Black",
+                            "id": "VHJhaXRUeXBlOjgyMjkzMzg="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzYyNzc=",
+                        "eventTimestamp": "2023-03-31T01:15:48.307247",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.5",
+                            "eth": "14.5",
+                            "usd": "26423.7849999999989415"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.5"
+                        },
+                        "priceType": {
+                            "unit": "14.5"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzYyNzc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Hat",
+                            "value": "M2 Bayc Flipped Brim",
+                            "id": "VHJhaXRUeXBlOjgyMjkzNjk="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzU0Njk=",
+                        "eventTimestamp": "2023-03-31T01:15:46.364256",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.3146",
+                            "eth": "14.3146",
+                            "usd": "26085.9250179999989550342"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.3146"
+                        },
+                        "priceType": {
+                            "unit": "14.3146"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzU0Njk="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Robot",
+                            "id": "VHJhaXRUeXBlOjgyMjkyNzU="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzUwNDk=",
+                        "eventTimestamp": "2023-03-31T01:15:45.279511",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.32055",
+                            "eth": "14.32055",
+                            "usd": "26096.76788149999895459985"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.32055"
+                        },
+                        "priceType": {
+                            "unit": "14.32055"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzUwNDk="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Death Bot",
+                            "id": "VHJhaXRUeXBlOjgyMjk1NTg="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ5NzA=",
+                        "eventTimestamp": "2023-03-31T01:15:44.852650",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.80705",
+                            "eth": "14.80705",
+                            "usd": "26983.33142649999891908535"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.80705"
+                        },
+                        "priceType": {
+                            "unit": "14.80705"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ5NzA="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Special",
+                            "value": "Fireflies",
+                            "id": "VHJhaXRUeXBlOjI1NTEzODY0"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ4NzA=",
+                        "eventTimestamp": "2023-03-31T01:15:44.454119",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.85695",
+                            "eth": "14.85695",
+                            "usd": "27074.26569349999891544265"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.85695"
+                        },
+                        "priceType": {
+                            "unit": "14.85695"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ4NzA="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Eyes",
+                            "value": "M2 Laser Eyes",
+                            "id": "VHJhaXRUeXBlOjgyMjk3NDU="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ2MTE=",
+                        "eventTimestamp": "2023-03-31T01:15:43.537755",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "15.45",
+                            "eth": "15.45",
+                            "usd": "28154.99849999999887215"
+                        },
+                        "endingPriceType": {
+                            "unit": "15.45"
+                        },
+                        "priceType": {
+                            "unit": "15.45"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ2MTE="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Cream",
+                            "id": "VHJhaXRUeXBlOjgyMjkyNTY="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ1ODI=",
+                        "eventTimestamp": "2023-03-31T01:15:43.366327",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.41505",
+                            "eth": "13.41505",
+                            "usd": "24446.64806649999902070135"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.41505"
+                        },
+                        "priceType": {
+                            "unit": "13.41505"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQ1ODI="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Otherdeed for Otherside",
+                            "imageUrl": "https://i.seadn.io/gae/yIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "otherdeed",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU="
+                        },
+                        "traitCriteria": null,
+                        "itemQuantity": "1",
+                        "item": {
+                            "__typename": "AssetType",
+                            "relayId": "QXNzZXRUeXBlOjQxMzA2NDMyMw==",
+                            "verificationStatus": "VERIFIED",
+                            "__isItemType": "AssetType",
+                            "displayName": "67",
+                            "assetContract": {
+                                "address": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+                                "id": "QXNzZXRDb250cmFjdFR5cGU6NjcwMTQ0",
+                                "chain": "ETHEREUM",
+                                "blockExplorerLink": "https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258"
+                            },
+                            "tokenId": "67",
+                            "chain": {
+                                "identifier": "ETHEREUM"
+                            },
+                            "animationUrl": null,
+                            "displayImageUrl": "https://i.seadn.io/gcs/files/3db86791cfaa63734157aa0a11df9a5d.jpg?w=500&auto=format",
+                            "imageUrl": "https://i.seadn.io/gcs/files/3db86791cfaa63734157aa0a11df9a5d.jpg?w=500&auto=format",
+                            "isDelisted": false,
+                            "backgroundColor": null,
+                            "collection": {
+                                "displayData": {
+                                    "cardDisplayStyle": "CONTAIN"
+                                },
+                                "id": "Q29sbGVjdGlvblR5cGU6MTQwNzcyNTU=",
+                                "slug": "otherdeed",
+                                "enabledRarities": [],
+                                "name": "Otherdeed for Otherside",
+                                "verificationStatus": "VERIFIED",
+                                "isCategory": false
+                            },
+                            "decimals": 0,
+                            "defaultRarityData": null,
+                            "isCurrentlyFungible": false,
+                            "__isNode": "AssetType",
+                            "id": "QXNzZXRUeXBlOjQxMzA2NDMyMw=="
+                        },
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQzNjI=",
+                        "eventTimestamp": "2023-03-31T01:15:42.405546",
+                        "eventType": "BID_ENTERED",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "22.1252",
+                            "eth": "22.1252",
+                            "usd": "40319.4157159999983848604"
+                        },
+                        "endingPriceType": {
+                            "unit": "22.1252"
+                        },
+                        "priceType": {
+                            "unit": "22.1252"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQzNjI="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Hat",
+                            "value": "M2 Bayc Hat Red",
+                            "id": "VHJhaXRUeXBlOjgyMjk0MDU="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQxOTc=",
+                        "eventTimestamp": "2023-03-31T01:15:41.744496",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.6",
+                            "eth": "14.6",
+                            "usd": "26606.0179999999989342"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.6"
+                        },
+                        "priceType": {
+                            "unit": "14.6"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzQxOTc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Noise",
+                            "id": "VHJhaXRUeXBlOjgyMjkyNjg="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzM4MjA=",
+                        "eventTimestamp": "2023-03-31T01:15:41.229407",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.42",
+                            "eth": "14.42",
+                            "usd": "26277.99859999999894734"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.42"
+                        },
+                        "priceType": {
+                            "unit": "14.42"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzM4MjA="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Special",
+                            "value": "Sakura",
+                            "id": "VHJhaXRUeXBlOjI1NTEzODA3"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI5NjY=",
+                        "eventTimestamp": "2023-03-31T01:15:39.551874",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.49615",
+                            "eth": "14.49615",
+                            "usd": "26416.76902949999894178105"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.49615"
+                        },
+                        "priceType": {
+                            "unit": "14.49615"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI5NjY="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Special",
+                            "value": "Smoke",
+                            "id": "VHJhaXRUeXBlOjI1NTEzNTkx"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI2NDE=",
+                        "eventTimestamp": "2023-03-31T01:15:38.133495",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.4585",
+                            "eth": "13.4585",
+                            "usd": "24525.8283049999990175295"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.4585"
+                        },
+                        "priceType": {
+                            "unit": "13.4585"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI2NDE="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Zombie",
+                            "id": "VHJhaXRUeXBlOjgyMjkzNjQ="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI1Njg=",
+                        "eventTimestamp": "2023-03-31T01:15:37.801340",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.2323",
+                            "eth": "14.2323",
+                            "usd": "25935.9472589999989610421"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.2323"
+                        },
+                        "priceType": {
+                            "unit": "14.2323"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzI1Njg="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 Dmt",
+                            "id": "VHJhaXRUeXBlOjgyMjk1Njk="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzIxNzc=",
+                        "eventTimestamp": "2023-03-31T01:15:36.023308",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.45",
+                            "eth": "14.45",
+                            "usd": "26332.66849999999894515"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.45"
+                        },
+                        "priceType": {
+                            "unit": "14.45"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzIxNzc="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Mouth",
+                            "value": "M2 Grin Diamond Grill",
+                            "id": "VHJhaXRUeXBlOjgyMjkzOTQ="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzE5OTg=",
+                        "eventTimestamp": "2023-03-31T01:15:35.224824",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "16.51",
+                            "eth": "16.51",
+                            "usd": "30086.66829999999879477"
+                        },
+                        "endingPriceType": {
+                            "unit": "16.51"
+                        },
+                        "priceType": {
+                            "unit": "16.51"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzE5OTg="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Azuki",
+                            "imageUrl": "https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "azuki",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6NDc2MzQ0Ng=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Offhand",
+                            "value": "Lightning Orb",
+                            "id": "VHJhaXRUeXBlOjI1NTE0MDA1"
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzE0NzU=",
+                        "eventTimestamp": "2023-03-31T01:15:33.020950",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "13.69339",
+                            "eth": "13.69339",
+                            "usd": "24953.87539869999900038253"
+                        },
+                        "endingPriceType": {
+                            "unit": "13.69339"
+                        },
+                        "priceType": {
+                            "unit": "13.69339"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzE0NzU="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M1 Solid Gold",
+                            "id": "VHJhaXRUeXBlOjgyMjkzMzQ="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzEyNjM=",
+                        "eventTimestamp": "2023-03-31T01:15:32.248009",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "18.55",
+                            "eth": "18.55",
+                            "usd": "33804.22149999999864585"
+                        },
+                        "endingPriceType": {
+                            "unit": "18.55"
+                        },
+                        "priceType": {
+                            "unit": "18.55"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzEyNjM="
+                    }
+                },
+                {
+                    "node": {
+                        "collection": {
+                            "name": "Mutant Ape Yacht Club",
+                            "imageUrl": "https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?w=500&auto=format",
+                            "isVerified": true,
+                            "slug": "mutant-ape-yacht-club",
+                            "isCategory": false,
+                            "id": "Q29sbGVjdGlvblR5cGU6MTE2Njc5NA=="
+                        },
+                        "traitCriteria": {
+                            "traitType": "Fur",
+                            "value": "M2 White",
+                            "id": "VHJhaXRUeXBlOjgyMjkyOTg="
+                        },
+                        "itemQuantity": "1",
+                        "item": null,
+                        "relayId": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzA4OTY=",
+                        "eventTimestamp": "2023-03-31T01:15:31.099218",
+                        "eventType": "TRAIT_OFFER",
+                        "customEventName": null,
+                        "orderStatus": null,
+                        "isMint": false,
+                        "isAirdrop": false,
+                        "creatorFee": null,
+                        "devFeePaymentEvent": null,
+                        "fromAccount": {
+                            "address": "0x6701d0dd7d2a0a0d84a088620583f82723c518aa",
+                            "config": null,
+                            "isCompromised": false,
+                            "user": {
+                                "publicUsername": "WhitebeardNFTs",
+                                "id": "VXNlclR5cGU6MjA3ODE2MTI="
+                            },
+                            "displayName": "WhitebeardNFTs",
+                            "imageUrl": "https://i.seadn.io/gcs/files/2baf884f30afd2294f06c663b489a2a2.jpg?w=500&auto=format",
+                            "id": "QWNjb3VudFR5cGU6MjA1OTQwMzk5"
+                        },
+                        "perUnitPrice": {
+                            "unit": "14.2",
+                            "eth": "14.2",
+                            "usd": "25877.0859999999989634"
+                        },
+                        "endingPriceType": {
+                            "unit": "14.2"
+                        },
+                        "priceType": {
+                            "unit": "14.2"
+                        },
+                        "payment": {
+                            "symbol": "WETH",
+                            "id": "UGF5bWVudEFzc2V0VHlwZTo3OQ=="
+                        },
+                        "seller": null,
+                        "sellOrder": null,
+                        "toAccount": null,
+                        "winnerAccount": null,
+                        "transaction": null,
+                        "id": "QXNzZXRFdmVudFR5cGU6MTA4MjU5MzA4OTY="
+                    }
+                }
+            ]
+        }
+    }
+}
