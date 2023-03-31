@@ -1,2 +1,0 @@
-user WhitebeardNFTs
-blacklist azuki
