@@ -1,0 +1,22 @@
+{
+  "name": "opensea_bid_copier",
+  "version": "1.0.0",
+  "description": "This bot copies offers and collections offers of all of the given accounts. It won't copy the offer which is older than 1 hour.",
+  "main": "send_offers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node send_offers.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Sajawal Fareedi",
+    "email": "sajawalfareedi448@gmail.com",
+    "url": "https://github.com/SajawalFareedi"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.9",
+    "opensea-js": "^4.0.24",
+    "web3": "^1.9.0"
+  }
+}

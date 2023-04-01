@@ -103,6 +103,14 @@ class OpenSeaBidder():
                     
                     if data.get("data"):
                         data: list = data.get("data")["eventActivity"]["edges"]
+                        
+                        offers = []
+                        
+                        for offer in data:
+                            offers.append({
+                                ""
+                            })
+                        
                         return True, data
                 
             except Exception as e:
