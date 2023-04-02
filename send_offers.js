@@ -3,12 +3,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 /* Importing all of the required packages */
 const Web3 = require("web3");
-const ethers = require("ethers")
 const WalletProvider = require("@truffle/hdwallet-provider");
 const { OpenSeaSDK, Network, } = require("opensea-js");
 const { makeBigNumber } = require("opensea-js/lib/utils/utils");
-const { generateRandomSalt } = require("@opensea/seaport-js/lib/utils/order");
-const { Seaport } = require("@opensea/seaport-js/lib/seaport.js");
 const { BuildOfferResponse } = require("opensea-js/lib/orders/types");
 const { readFileSync } = require("fs");
 const axios = require("axios").default;
@@ -111,7 +108,6 @@ const buildCollectionTraitOffer = async (offer, openSea) => {
                 },
                 "trait": {
                     "type": offer.trait_type,
-                    // "value": offer.trait_value
                 }
             }
         }
@@ -146,26 +142,19 @@ const buildCollectionTraitOffer = async (offer, openSea) => {
  */
 const sendCollectionOffer = async (offer, openSea) => {
     try {
-        // const o = await openSea.api.buildOffer(wallet_address, "1", "azuki");
-        // console.info("Consideration_1:", o.partialParameters.consideration[0])
-
         const data = await buildCollectionTraitOffer(offer, openSea);
 
         const consideration = data.partialParameters.consideration[0];
-        const zone = data.partialParameters.zone;
-        // const zoneHash = data.partialParameters.zoneHash;
-
-        // console.info("Consideration:", consideration)
+        // const zone = data.partialParameters.zone;
 
         const collection = await openSea.api.getCollection(offer.slug);
-        // console.info("Got collection:", collection)
+
         const fees = await openSea.getFees({
             collection: collection,
             paymentTokenAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
             startAmount: makeBigNumber((offer.startAmount * 10e17).toString()),
             endAmount: makeBigNumber((offer.startAmount * 10e17).toString()),
         })
-        // console.info("Got Fees:", fees)
 
         const order_payload = {
             offerer: wallet_address,
@@ -186,7 +175,7 @@ const sendCollectionOffer = async (offer, openSea) => {
                 fees.collectionSellerFees[0]
             ],
             endTime: Math.round(new Date().getTime() / 1000) + (60 * exp_time),
-            zone: zone,
+            // zone: zone,
             restrictedByZone: false,
             allowPartialFills: true
         }
@@ -195,110 +184,36 @@ const sendCollectionOffer = async (offer, openSea) => {
             order_payload.consideration.push(fees.openseaSellerFees[0])
         }
 
-        console.log("Payload:", order_payload)
-
-        // const eth_provider = new ethers.JsonRpcProvider(web3.currentProvider);
-        // const signer = await eth_provider.getSigner(wallet_address)
-        // // let signer = await openSea.seaport_v1_4._getSigner(wallet_address)
-
-        // await openSea.seaport_v1_4._formatOrder(signer, wallet_address, false, order_payload)
-
-
-        // const payload = {
-        //     "criteria": {
-        //         "collection": {
-        //             "slug": offer.slug
-        //         },
-        //         "trait": {
-        //             "type": offer.trait_type,
-        //             "value": offer.trait_value
-        //         },
-        //     },
-        //     "protocol_data": {
-        //         "parameters": {
-        //             "offerer": wallet_address,
-        //             "offer": [
-        //                 {
-        //                     "itemType": 1,
-        //                     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //                     "identifierOrCriteria": 0,
-        //                     "startAmount": offer.startAmount * 10e18,
-        //                     "endAmount": offer.startAmount * 10e18
-        //                 }
-        //             ],
-        //             "consideration": [
-        //                 consideration[0],
-        //                 {
-        //                     "itemType": 1,
-        //                     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //                     "identifierOrCriteria": 0,
-        //                     "startAmount": 250000000000000,
-        //                     "endAmount": 250000000000000,
-        //                     "recipient": "0x0000a26b00c1F0DF003000390027140000fAa719"
-        //                 },
-        //                 {
-        //                     "itemType": 1,
-        //                     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //                     "identifierOrCriteria": 0,
-        //                     "startAmount": 250000000000000,
-        //                     "endAmount": 250000000000000,
-        //                     "recipient": "0xA858DDc0445d8131daC4d1DE01f834ffcbA52Ef1"
-        //                 }
-        //             ],
-        //             "startTime": Math.floor(Date.now() / 1000).toString(),
-        //             "endTime": Math.round(new Date().getTime() / 1000) + (60 * exp_time),
-        //             "orderType": 0,
-        //             "zone": zone,
-        //             "zoneHash": zoneHash,
-        //             "salt": generateRandomSalt(),
-        //             "conduitKey": openSea.seaport_v1_4.OPENSEA_CONDUIT_KEY,
-        //             "totalOriginalConsiderationItems": 3,
-        //             "counter": 0
-        //         },
-        //         "signature": "0x0"
-        //     }
-        // }
-
-
-        // const _seaport = new Seaport(web3.currentProvider);
-        // console.info(_seaport._formatOrder)
-
-
-
-        // consideration.push({
-        //     "itemType": 1,
-        //     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //     "identifierOrCriteria": 0,
-        //     "startAmount": 250000000000000,
-        //     "endAmount": 250000000000000,
-        //     "recipient": "0x0000a26b00c1F0DF003000390027140000fAa719"
-        // })
-
-        // consideration.push({
-        //     "itemType": 1,
-        //     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //     "identifierOrCriteria": 0,
-        //     "startAmount": 250000000000000,
-        //     "endAmount": 250000000000000,
-        //     "recipient": "0xA858DDc0445d8131daC4d1DE01f834ffcbA52Ef1"
-        // })
-
-        // const _offer = [{
-        //     "itemType": 1,
-        //     "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        //     "identifierOrCriteria": 0,
-        //     "startAmount": offer.startAmount * 10e18,
-        //     "endAmount": offer.startAmount * 10e18
-        // }]
-
         const order = await openSea.seaport_v1_4.createOrder(order_payload, wallet_address)
+        const _order = await order.executeAllActions();
 
-        console.info(order)
-        console.info("\n\n")
-        console.info(order.actions)
+        const final_payload = {
+            "criteria": {
+                "collection": {
+                    "slug": offer.slug
+                },
+                "trait": {
+                    "type": offer.trait_type,
+                    "value": offer.trait_value
+                },
+            },
+            "protocol_data": _order
+        }
 
-        // const _order = await order.actions[0].createOrder();
-        // 
+        for (let i = 0; i < 3; i++) {
+            const res = await axios.post("https://api.opensea.io/v2/offers", JSON.stringify(final_payload), {
+                headers: {
+                    "accept": "application/json",
+                    "content-type": "application/json",
+                    "X-API-KEY": "cc51fa67a8684f7eb7725b4f82fa1815"
+                }
+            })
+
+            if (res.status == 200) {
+                console.log("Collection Offer Sent successfuly!", res.data.criteria);
+                break;
+            }
+        }
 
     } catch (error) {
         console.trace(`Error while sending collections offer: ${error}`)
@@ -355,25 +270,4 @@ const main = async (offers) => {
     }
 }
 
-main([
-    // {
-    //     tokenId: "1396",
-    //     tokenAddress: "0x65800baea6d0b06c031c384598aa782bf9e5209a",
-    //     startAmount: 0.003,
-    //     type: "offer"
-    // },
-    // {
-    //     tokenId: "2717",
-    //     tokenAddress: "0x0e8d5ad992b37f145ed1985d4bffcbc3d5bd6be3",
-    //     startAmount: 0.004,
-    //     type: "offer"
-    // }
-    {
-        slug: "azuki",
-        trait_type: "Offhand",
-        trait_value: "Water Orb",
-        startAmount: 0.05,
-        quantity: "1",
-        type: "collection"
-    }
-]);
+main(process.argv[2]);
