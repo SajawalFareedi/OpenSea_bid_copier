@@ -1,10 +1,15 @@
 import sys
+import json
 import logging
+import datetime
+import subprocess
 
-from time import sleep
 from requests import api
 from random import randint
 from logging import Logger
+from threading import Thread
+
+from time import sleep, time
 from multiprocessing.dummy import Pool as ThreadPool
 
 
@@ -16,6 +21,8 @@ class OpenSeaBidder():
         
         self.accounts = []
         self.blacklist = []
+        self.eth_to_add = 0.0001
+        self.exp_time = 30
         
         self.proxies = {
             "http": "http://cdaaa782bccd4b64ac3f3ea16d2ec3d5:@proxy.zyte.com:8011/",
@@ -82,12 +89,27 @@ class OpenSeaBidder():
                         self.accounts.append(item[1])
                     elif item[0] == "blacklist":
                         self.blacklist.append(item[1])
+                    elif item[0] == "eth_to_add":
+                        self.eth_to_add = float(item[1])
+                    elif item[0] == "exp_time":
+                        self.exp_time = float(item[1])
                         
             return True, ""
         except Exception as e:
             return False, str(e)
         
-    def get_offers(self, account: str, fr: bool, et: str) -> 'tuple[bool, str]' | 'tuple[bool, list]':
+    def send_offers(self, offers: 'list[dict]'):
+        self.log(20, "Sending new offers...")
+        
+        offers: str = json.dumps(offers)
+        p = subprocess.Popen(['node', './send_offers.js', offers])
+        
+        try:
+            p.wait(60*30)
+        except:
+            p.terminate()
+        
+    def get_offers(self, account: str, fr: bool, et: str) -> 'tuple[bool, str] | tuple[bool, list[dict], str]':
         payload = self.payload
         payload["variables"]["identity"]["username"] = account
         
@@ -104,37 +126,132 @@ class OpenSeaBidder():
                     if data.get("data"):
                         data: list = data.get("data")["eventActivity"]["edges"]
                         
-                        offers = []
+                        offers: 'list[dict]' = []
+                        eventTimestamp = ""
                         
-                        for offer in data:
-                            offers.append({
-                                ""
-                            })
+                        for i in range(len(data)):
+                            offer: dict = data[i]["node"]
+                            
+                            if i == 0:
+                                eventTimestamp = offer["eventTimestamp"]
+                            
+                            if self.blacklist.index(offer["collection"]["slug"]) != -1:
+                               continue
+                            
+                            if offer["perUnitPrice"].get("eth", 0) == 0:
+                                continue
+                            
+                            if offer["eventType"] == "TRAIT_OFFER":
+                                offers.append(
+                                    {
+                                        "slug": offer["collection"]["slug"],
+                                        "trait_type": offer["traitCriteria"]["traitType"],
+                                        "trait_value": offer["traitCriteria"]["value"],
+                                        "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                        "quantity": offer["itemQuantity"],
+                                        "type": "collection"
+                                    }
+                                )
+                            else:
+                                offers.append({
+                                    "tokenId": offer["item"]["tokenId"],
+                                    "tokenAddress": offer["assetContract"]["address"],
+                                    "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                    "type": "offer"
+                                })
                         
-                        return True, data
+                        return True, offers, eventTimestamp
                 
             except Exception as e:
-                return False, str(e)
+                return False, str(e), ""
             
             sleep(randint(3, 6))
         
-        return False, "NO DATA & NO ERROR"
+        return False, "NO DATA & NO ERROR", ""
+    
+    def check_item_dont_exists(self, offer: dict, offers: 'list[dict]') -> 'tuple[bool, list]':
+        for o in offers:
+            if offer["type"] == "offer" and o["type"] == "offer":
+                if offer["tokenId"] == o["tokenId"] and offer["tokenAddress"] == o["tokenAddress"]:
+                    if offer["time"] + (60 * (self.exp_time + 3)) > round(time()):
+                        return False, []
+                    else:
+                        offers = [_ for _ in offers if not (offer["tokenId"] == _["tokenId"] and offer["tokenAddress"] == _["tokenAddress"])]
+                        return True, offers
+            else:
+                if offer["slug"] == o["slug"] and offer["trait_type"] == o["trait_type"] and offer["trait_value"] == o["trait_value"]:
+                    if offer["time"] + (60 * (self.exp_time + 3)) > round(time()):
+                        return False, []
+                    else:
+                        offers = [_ for _ in offers if not (offer["tokenId"] == _["tokenId"] and offer["tokenAddress"] == _["tokenAddress"])]
+                        return True, offers
+        
+        return True, offers
+    
+    def filter_out_old_ones(self, offers: 'list[dict]') -> 'list[dict]':
+        data = []
+        with open("sent_offers.json", "r", encoding="utf8") as f:
+            data = json.loads(f.read())
+        
+        if len(data) == 0:
+            return offers
+        
+        filtered_offers = []
+        
+        for offer in offers:
+            success, unique_offers = self.check_item_dont_exists(offer, data)
+            
+            if success:
+                filtered_offers.append(offer)
+                data = unique_offers
+        
+        with open("sent_offers.json", "w", encoding="utf8") as w_f:
+            w_f.write(json.dumps(data))
+        
+        return filtered_offers
+    
+    def save_new_offers(self, offers: 'list[dict]', _time: int):
+        data = []
+        
+        with open("sent_offers.json", "r", encoding="utf8") as f:
+            data: 'list[dict]' = json.loads(f.read())
+            
+            for _ in offers:
+                _["time"] = _time
+            
+            [data.append(offer) for offer in offers]
+            
+        with open("sent_offers.json", "w", encoding="utf8") as w_f:
+            w_f.write(json.dumps(data))
     
     def monitor_account(self, account: str) -> None:
         fr = True
         et = ""
         
         while True:
-            success, offers = self.get_offers(account, fr, et)
+            success, offers, eventTimestamp = self.get_offers(account, fr, et)
             
             if not success:
                 self.log(40, offers)
                 continue
             
             fr = False
+            et = eventTimestamp
             
-            for offer in offers:
-                ...
+            offers = self.filter_out_old_ones(offers)
+            offers_saving_time = round(time())
+            
+            if len(offers) == 0:
+                continue
+            
+            self.save_new_offers(offers, offers_saving_time)
+            
+            Thread(target=self.send_offers, args=(offers, )).start()
+            
+            time_to_wait = (datetime.datetime.fromisoformat(eventTimestamp) - datetime.datetime.utcnow()).total_seconds() + 2
+            
+            if time_to_wait > 0:
+                sleep(time_to_wait)
     
     def run(self):
         self.log(20, "Loading config & starting bot")
@@ -150,13 +267,12 @@ class OpenSeaBidder():
         pool.close()
         pool.join()
         
-        
+
 if __name__ == "__main__":
     from shutup import mute_warnings
     mute_warnings()
     
-    logging.basicConfig(filename="opensea_bidder.log", filemode='a',
-                        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
+    logging.basicConfig(filename="opensea_bidder.log", filemode='a', format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
     logger = logging.getLogger("OpenSeaBiddingLogger")
     
     bot = OpenSeaBidder(logger=logger)

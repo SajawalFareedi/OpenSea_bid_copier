@@ -17,7 +17,7 @@ let exp_time = 30;
 
 const loadConfig = () => {
     return new Promise((resolve, reject) => {
-        console.log("Loading config file...");
+        // console.log("Loading config file...");
         try {
             const data = readFileSync("config.txt", { encoding: "utf8" }).trim().split("\r").join("").split("\n")
 
@@ -55,15 +55,15 @@ const sleep = (seconds) => {
  * @returns {Promise<OpenSeaSDK>}
  */
 const initProvider = async () => {
-    console.info("\nInitializing...");
+    // console.info("\nInitializing...");
 
     try {
         const wallet = new WalletProvider({
             privateKeys: [private_key],
             providerOrUrl: "https://rpc.flashbots.net",
         });
-        console.info("Wallet Connected!");
-        console.info(`Wallet: ${wallet.getAddress()}`);
+        // console.info("Wallet Connected!");
+        // console.info(`Wallet: ${wallet.getAddress()}`);
 
         web3 = new Web3(wallet, {
             reconnect: {
@@ -74,7 +74,7 @@ const initProvider = async () => {
             },
         });
 
-        console.info("Connected with flashbots Provider!");
+        // console.info("Connected with flashbots Provider!");
 
         return new OpenSeaSDK(web3.currentProvider, { networkName: Network.Main, apiKey: "cc51fa67a8684f7eb7725b4f82fa1815" })
 
@@ -86,11 +86,10 @@ const initProvider = async () => {
 /**
  * 
  * @param {object} offer 
- * @param {OpenSeaSDK} openSea
  * @returns {Promise<BuildOfferResponse>} data got from the OpenSeaAPI response
  */
 
-const buildCollectionTraitOffer = async (offer, openSea) => {
+const buildCollectionTraitOffer = async (offer) => {
     try {
         const api_endpoint = "https://api.opensea.io/v2/offers/build";
         const headers = {
@@ -142,7 +141,7 @@ const buildCollectionTraitOffer = async (offer, openSea) => {
  */
 const sendCollectionOffer = async (offer, openSea) => {
     try {
-        const data = await buildCollectionTraitOffer(offer, openSea);
+        const data = await buildCollectionTraitOffer(offer);
 
         const consideration = data.partialParameters.consideration[0];
         // const zone = data.partialParameters.zone;
@@ -237,7 +236,12 @@ const sendOffer = async (offer, openSea) => {
             expirationTime: Math.round(new Date().getTime() / 1000) + (60 * exp_time) // 30 minutes
         })
 
-        console.info("Offer sent successfuly:", _offer.protocolData.parameters.offer[0])
+        console.info("Offer sent successfuly:", {
+            tokenId: offer.tokenId,
+            tokenAddress: offer.tokenAddress,
+            price: offer.startAmount
+        })
+
     } catch (error) {
         console.error(`Failed to send an offer! reason: ${error}`)
     }
@@ -270,4 +274,4 @@ const main = async (offers) => {
     }
 }
 
-main(process.argv[2]);
+main(JSON.parse(process.argv[2]))
