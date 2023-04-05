@@ -1,7 +1,6 @@
 import sys
 import json
 import urllib.parse
-# import web3
 import requests
 import logging
 import datetime
@@ -118,27 +117,11 @@ class OpenSeaBidder():
         
     def get_offers(self, account: str, fr: bool, et: str) -> 'tuple[bool, str] | tuple[bool, list[dict], str]':
         payload = self.payload
-        
-        # is_address = web3.Web3.is_checksum_address(account)
-        
+
         if len(account) == 0:
             return False, "invalid account (ignore)", None
         
         payload["variables"]["identity"]["address"] = account
-        
-        # if is_address:
-        #     payload["variables"]["identity"]["address"] = account
-        # else:
-        #     payload["variables"]["identity"]["username"] = account
-        
-        # if payload["variables"]["identity"].get("address"):
-        #     if payload["variables"]["identity"].get("username"):
-        #         if is_address:
-        #             del payload["variables"]["identity"]["username"]
-        #         else:
-        #             del payload["variables"]["identity"]["address"]
-        
-        # print(payload["variables"]["identity"], "\n")
         
         if not fr:
             payload["variables"]["eventTimestamp_Gt"] = et
@@ -218,59 +201,6 @@ class OpenSeaBidder():
         
         return False, "No new data", None
     
-    def check_item_dont_exists(self, offer: dict, offers: 'list[dict]') -> 'tuple[bool, list]':
-        for o in offers:
-            if offer["type"] == "offer" and o["type"] == "offer":
-                if offer["tokenId"] == o["tokenId"] and offer["tokenAddress"] == o["tokenAddress"]:
-                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
-                        return False, []
-                    else:
-                        offers = [_ for _ in offers if not (offer["tokenId"] == _["tokenId"] and offer["tokenAddress"] == _["tokenAddress"])]
-                        return True, offers
-            elif offer["type"] == "trait" and o["type"] == "trait":
-                if offer["slug"] == o["slug"] and offer["trait_type"] == o["trait_type"] and offer["trait_value"] == o["trait_value"]:
-                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
-                        return False, []
-                    else:
-                        offers = [_ for _ in offers if not (offer["slug"] == _["slug"] and offer["trait_type"] == _["trait_type"] and offer["trait_value"] == _["trait_value"])]
-                        return True, offers
-            elif offer["type"] == "collection" and o["type"] == "collection":
-                if offer["slug"] == o["slug"]:
-                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
-                        return False, []
-                    else:
-                        offers = [_ for _ in offers if not (offer["slug"] == _["slug"])]
-                        return True, offers
-        
-        return True, offers
-    
-    def filter_out_old_ones(self, offers: 'list[dict]') -> 'list[dict]':
-        data = []
-        with open("sent_offers.json", "r", encoding="utf8") as f:
-            data = json.loads(f.read())
-        
-        if len(data) == 0:
-            return offers
-        
-        filtered_offers = []
-        
-        for offer in offers:
-            
-            timestamp = offer["timestamp"]
-            if (datetime.datetime.fromisoformat(timestamp) - datetime.datetime.utcnow()).total_seconds() >= 60*60:
-                continue
-            
-            success, unique_offers = self.check_item_dont_exists(offer, data)
-            
-            if success:
-                filtered_offers.append(offer)
-                data = unique_offers
-        
-        with open("sent_offers.json", "w", encoding="utf8") as w_f:
-            w_f.write(json.dumps(data))
-        
-        return filtered_offers
-    
     def save_new_offers(self, offers: 'list[dict]', _time: int):
         data = []
         
@@ -333,11 +263,14 @@ class OpenSeaBidder():
                             
                         if our_bid and their_bid:
                             break
-                        
-                    if int(our_bid) < int(their_bid):
+                    
+                    if not our_bid:
                         final_offers.append(offer)
-            except:
-                ...
+                    else:
+                        if int(our_bid) < int(their_bid):
+                            final_offers.append(offer)
+            except Exception as e:
+                self.log(40, str(e))
         
         return final_offers
     
@@ -355,8 +288,6 @@ class OpenSeaBidder():
             
             fr = False
             et = eventTimestamp
-            
-            # offers = self.filter_out_old_ones(offers)
             
             offers = self.check_we_are_above(offers, account)
             
