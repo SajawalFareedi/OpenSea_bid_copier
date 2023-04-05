@@ -77,7 +77,7 @@ const initProvider = async () => {
 
         // console.info("Connected with flashbots Provider!");
 
-        return new OpenSeaSDK(web3.currentProvider, { networkName: Network.Main, apiKey: "cc51fa67a8684f7eb7725b4f82fa1815" })
+        return new OpenSeaSDK(web3.currentProvider, { networkName: Network.Main, apiKey: "f5b86e9f4c8044169fffbab922fbe519" })
 
     } catch (e) {
         console.trace(e);
@@ -96,7 +96,7 @@ const buildTraitOffer = async (offer) => {
         const headers = {
             "accept": "application/json",
             "content-type": "application/json",
-            "X-API-KEY": "cc51fa67a8684f7eb7725b4f82fa1815"
+            "X-API-KEY": "f5b86e9f4c8044169fffbab922fbe519"
         }
 
         const payload = {
@@ -205,7 +205,7 @@ const sendTraitOffer = async (offer, openSea) => {
                 headers: {
                     "accept": "application/json",
                     "content-type": "application/json",
-                    "X-API-KEY": "cc51fa67a8684f7eb7725b4f82fa1815"
+                    "X-API-KEY": "f5b86e9f4c8044169fffbab922fbe519"
                 }
             })
 
@@ -285,14 +285,14 @@ const main = async (offers) => {
             const offer = offers[i];
 
             if (offer.type == "trait") {
-                sendTraitOffer(offer, openSea)
-                await sleep(1.2)
+                await sendTraitOffer(offer, openSea)
+                // await sleep(0.6)
             } else if (offer.type == "offer") {
-                sendOffer(offer, openSea)
-                await sleep(1.2)
+                await sendOffer(offer, openSea)
+                // await sleep(0.6)
             } else if (offer.type == "collection") {
-                sendCollectionOffer(offer, openSea)
-                await sleep(1.2)
+                await sendCollectionOffer(offer, openSea)
+                // await sleep(0.6)
             }
         }
 
@@ -302,9 +302,3 @@ const main = async (offers) => {
 }
 
 main(JSON.parse(process.argv[2]))
-// main([{
-//     "tokenId": "11013",
-//     "tokenAddress": "0x76be3b62873462d2142405439777e971754e8e77",
-//     "startAmount": 0.01,
-//     "type": "offer",
-// }])

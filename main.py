@@ -163,7 +163,7 @@ class OpenSeaBidder():
                                         "slug": offer["collection"]["slug"],
                                         "trait_type": offer["traitCriteria"]["traitType"],
                                         "trait_value": offer["traitCriteria"]["value"],
-                                        "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                        "startAmount": round(float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add, 6),
                                         "quantity": offer["itemQuantity"],
                                         "type": "trait",
                                         "timestamp": offer["eventTimestamp"]
@@ -174,7 +174,7 @@ class OpenSeaBidder():
                                 offers.append({
                                     "tokenId": offer["item"]["tokenId"],
                                     "tokenAddress": offer["item"]["assetContract"]["address"],
-                                    "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                    "startAmount": round(float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add, 6),
                                     "type": "offer",
                                     "timestamp": offer["eventTimestamp"]
                                     # "time": round(time())
@@ -183,7 +183,7 @@ class OpenSeaBidder():
                                 offers.append(
                                     {
                                         "slug": offer["collection"]["slug"],
-                                        "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                        "startAmount": round(float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add, 6),
                                         "quantity": offer["itemQuantity"],
                                         "type": "collection",
                                         "timestamp": offer["eventTimestamp"]
@@ -227,7 +227,7 @@ class OpenSeaBidder():
             their_bid = None
             headers = {
                 "accept": "application/json",
-                "X-API-KEY": "cc51fa67a8684f7eb7725b4f82fa1815"
+                "X-API-KEY": "f5b86e9f4c8044169fffbab922fbe519"
             }
             
             if offer["type"] == "offer":
@@ -271,6 +271,8 @@ class OpenSeaBidder():
                             final_offers.append(offer)
             except Exception as e:
                 self.log(40, str(e))
+            
+            sleep(randint(1, 2))
         
         return final_offers
     
@@ -319,6 +321,7 @@ class OpenSeaBidder():
             self.log(40, error)
             sys.exit(1)
         
+        self.log(20, "Bot is running...")
         pool = ThreadPool(len(self.accounts))
         results = pool.map(self.monitor_account, self.accounts)
         
