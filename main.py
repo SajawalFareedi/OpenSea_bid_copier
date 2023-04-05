@@ -1,6 +1,8 @@
 import sys
 import json
-import web3
+import urllib.parse
+# import web3
+import requests
 import logging
 import datetime
 import subprocess
@@ -25,6 +27,7 @@ class OpenSeaBidder():
         self.eth_to_add = 0.0001
         self.exp_time = 30
         self.max_weth_available = 0
+        self.wallet = ""
         
         self.proxies = {
             "http": "http://cdaaa782bccd4b64ac3f3ea16d2ec3d5:@proxy.zyte.com:8011/",
@@ -95,6 +98,8 @@ class OpenSeaBidder():
                         self.exp_time = float(item[1])
                     elif item[0] == "max_weth_available":
                         self.max_weth_available = float(item[1])
+                    elif item[0] == "wallet_address":
+                        self.wallet = item[1].lower()
                         
             return True, ""
         except Exception as e:
@@ -114,22 +119,24 @@ class OpenSeaBidder():
     def get_offers(self, account: str, fr: bool, et: str) -> 'tuple[bool, str] | tuple[bool, list[dict], str]':
         payload = self.payload
         
-        is_address = web3.Web3.is_checksum_address(account)
+        # is_address = web3.Web3.is_checksum_address(account)
         
         if len(account) == 0:
             return False, "invalid account (ignore)", None
         
-        if is_address:
-            payload["variables"]["identity"]["address"] = account
-        else:
-            payload["variables"]["identity"]["username"] = account
+        payload["variables"]["identity"]["address"] = account
         
-        if payload["variables"]["identity"].get("address"):
-            if payload["variables"]["identity"].get("username"):
-                if is_address:
-                    del payload["variables"]["identity"]["username"]
-                else:
-                    del payload["variables"]["identity"]["address"]
+        # if is_address:
+        #     payload["variables"]["identity"]["address"] = account
+        # else:
+        #     payload["variables"]["identity"]["username"] = account
+        
+        # if payload["variables"]["identity"].get("address"):
+        #     if payload["variables"]["identity"].get("username"):
+        #         if is_address:
+        #             del payload["variables"]["identity"]["username"]
+        #         else:
+        #             del payload["variables"]["identity"]["address"]
         
         # print(payload["variables"]["identity"], "\n")
         
@@ -281,6 +288,59 @@ class OpenSeaBidder():
     def get_affordable_offers(self, offers: 'list[dict]') -> 'list[dict]':
         return [offer for offer in offers if offer["startAmount"] <= self.max_weth_available]
     
+    def check_we_are_above(self, offers: 'list[dict]', account: str) -> 'list[dict]':
+        account = account.lower()
+        final_offers = []
+        
+        for offer in offers:
+            our_bid = None
+            their_bid = None
+            headers = {
+                "accept": "application/json",
+                "X-API-KEY": "cc51fa67a8684f7eb7725b4f82fa1815"
+            }
+            
+            if offer["type"] == "offer":
+                api_endpoint = f"https://api.opensea.io/v2/orders/ethereum/seaport/offers?asset_contract_address={offer['tokenAddress']}&token_ids={offer['tokenId']}&order_by=created_date&order_direction=desc"
+            elif offer["type"] == "collection":
+                api_endpoint = f"https://api.opensea.io/v2/offers/collection/{offer['slug']}"
+            elif offer["type"] == "trait":
+                _type = urllib.parse.quote(offer['trait_type'])
+                _value = urllib.parse.quote(offer['trait_value'])
+                api_endpoint = f"https://api.opensea.io/v2/offers/collection/{offer['slug']}/traits?type={_type}&value={_value}"
+                
+            try:
+                res = requests.get(api_endpoint, headers=headers)
+                    
+                if res.status_code == 200:
+                    data = res.json()
+                    
+                    if offer["type"] == "offer":
+                        orders = data["orders"]
+                    elif offer["type"] == "collection" or offer["type"] == "trait":
+                        orders = data["offers"]
+                        
+                    for order in orders:
+                        params = order["protocol_data"]["parameters"]
+                        offerer = params.get("offerer", "").lower()
+                            
+                        if offerer == account:
+                            if not their_bid:
+                                their_bid = params.get("offer")[0].get("startAmount")
+                        elif offerer == self.wallet:
+                            if not our_bid:
+                                our_bid = params.get("offer")[0].get("startAmount")
+                            
+                        if our_bid and their_bid:
+                            break
+                        
+                    if int(our_bid) < int(their_bid):
+                        final_offers.append(offer)
+            except:
+                ...
+        
+        return final_offers
+    
     def monitor_account(self, account: str) -> None:
         fr = True
         et = None
@@ -296,7 +356,9 @@ class OpenSeaBidder():
             fr = False
             et = eventTimestamp
             
-            offers = self.filter_out_old_ones(offers)
+            # offers = self.filter_out_old_ones(offers)
+            
+            offers = self.check_we_are_above(offers, account)
             
             if len(offers) == 0:
                 continue
@@ -316,7 +378,7 @@ class OpenSeaBidder():
             if time_to_wait > 0:
                 sleep(time_to_wait)
             
-            sleep(randint(2, 4))
+            sleep(randint(1, 2))
     
     def run(self):
         self.log(20, "Loading config & starting bot")
