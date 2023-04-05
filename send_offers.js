@@ -61,6 +61,7 @@ const initProvider = async () => {
         const wallet = new WalletProvider({
             privateKeys: [private_key],
             providerOrUrl: "https://rpc.flashbots.net",
+            pollingInterval: 10000
         });
         // console.info("Wallet Connected!");
         // console.info(`Wallet: ${wallet.getAddress()}`);
@@ -89,7 +90,7 @@ const initProvider = async () => {
  * @returns {Promise<BuildOfferResponse>} data got from the OpenSeaAPI response
  */
 
-const buildCollectionTraitOffer = async (offer) => {
+const buildTraitOffer = async (offer) => {
     try {
         const api_endpoint = "https://api.opensea.io/v2/offers/build";
         const headers = {
@@ -130,7 +131,7 @@ const buildCollectionTraitOffer = async (offer) => {
         return null
 
     } catch (error) {
-        console.error(`Error while trying to build collection offer data: ${error}`)
+        console.error(`Error while trying to build collection trait offer data: ${error}`)
     }
 }
 
@@ -139,9 +140,9 @@ const buildCollectionTraitOffer = async (offer) => {
  * @param {object} offer 
  * @param {OpenSeaSDK} openSea
  */
-const sendCollectionOffer = async (offer, openSea) => {
+const sendTraitOffer = async (offer, openSea) => {
     try {
-        const data = await buildCollectionTraitOffer(offer);
+        const data = await buildTraitOffer(offer);
 
         const consideration = data.partialParameters.consideration[0];
         // const zone = data.partialParameters.zone;
@@ -209,13 +210,36 @@ const sendCollectionOffer = async (offer, openSea) => {
             })
 
             if (res.status == 200) {
-                console.log("Collection Offer Sent successfuly!", res.data.criteria);
+                console.log("Collection Trait Offer Sent successfuly!", res.data.criteria);
                 break;
             }
         }
 
     } catch (error) {
-        console.trace(`Error while sending collections offer: ${error}`)
+        console.trace(`Error while sending collection trait offer: ${error}`)
+    }
+}
+
+/**
+ * 
+ * @param {object} offer 
+ * @param {OpenSeaSDK} openSea 
+ */
+const sendCollectionOffer = async (offer, openSea) => {
+    try {
+        // console.log(offer)
+        const res = await openSea.createCollectionOffer({
+            collectionSlug: offer.slug,
+            accountAddress: wallet_address,
+            amount: offer.startAmount,
+            quantity: Number(offer.quantity),
+            expirationTime: Math.round(new Date().getTime() / 1000) + (60 * exp_time), // 30 minutes
+            paymentTokenAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+        })
+
+        console.info("Collection Offer sent successfuly:", res.criteria);
+    } catch (error) {
+        console.error("Error while sending collection offer: ", error);
     }
 }
 
@@ -260,12 +284,15 @@ const main = async (offers) => {
         for (let i = 0; i < offers.length; i++) {
             const offer = offers[i];
 
-            if (offer.type == "collection") {
-                sendCollectionOffer(offer, openSea)
-                await sleep(0.6)
-            } else {
+            if (offer.type == "trait") {
+                sendTraitOffer(offer, openSea)
+                await sleep(1.2)
+            } else if (offer.type == "offer") {
                 sendOffer(offer, openSea)
-                await sleep(0.6)
+                await sleep(1.2)
+            } else if (offer.type == "collection") {
+                sendCollectionOffer(offer, openSea)
+                await sleep(1.2)
             }
         }
 
@@ -275,3 +302,9 @@ const main = async (offers) => {
 }
 
 main(JSON.parse(process.argv[2]))
+// main([{
+//     "tokenId": "11013",
+//     "tokenAddress": "0x76be3b62873462d2142405439777e971754e8e77",
+//     "startAmount": 0.01,
+//     "type": "offer",
+// }])

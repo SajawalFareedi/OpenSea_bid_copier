@@ -1,5 +1,6 @@
 import sys
 import json
+import web3
 import logging
 import datetime
 import subprocess
@@ -23,6 +24,7 @@ class OpenSeaBidder():
         self.blacklist = []
         self.eth_to_add = 0.0001
         self.exp_time = 30
+        self.max_weth_available = 0
         
         self.proxies = {
             "http": "http://cdaaa782bccd4b64ac3f3ea16d2ec3d5:@proxy.zyte.com:8011/",
@@ -62,9 +64,7 @@ class OpenSeaBidder():
                     "COLLECTION_OFFER",
                     "OFFER_ENTERED"
                 ],
-                "identity": {
-                    "username": ""
-                },
+                "identity": {},
                 "showAll": True,
                 "stringTraits": [],
                 "isRarityExpansionEnabled": True,
@@ -93,6 +93,8 @@ class OpenSeaBidder():
                         self.eth_to_add = float(item[1])
                     elif item[0] == "exp_time":
                         self.exp_time = float(item[1])
+                    elif item[0] == "max_weth_available":
+                        self.max_weth_available = float(item[1])
                         
             return True, ""
         except Exception as e:
@@ -111,7 +113,25 @@ class OpenSeaBidder():
         
     def get_offers(self, account: str, fr: bool, et: str) -> 'tuple[bool, str] | tuple[bool, list[dict], str]':
         payload = self.payload
-        payload["variables"]["identity"]["username"] = account
+        
+        is_address = web3.Web3.is_checksum_address(account)
+        
+        if len(account) == 0:
+            return False, "invalid account (ignore)", None
+        
+        if is_address:
+            payload["variables"]["identity"]["address"] = account
+        else:
+            payload["variables"]["identity"]["username"] = account
+        
+        if payload["variables"]["identity"].get("address"):
+            if payload["variables"]["identity"].get("username"):
+                if is_address:
+                    del payload["variables"]["identity"]["username"]
+                else:
+                    del payload["variables"]["identity"]["address"]
+        
+        # print(payload["variables"]["identity"], "\n")
         
         if not fr:
             payload["variables"]["eventTimestamp_Gt"] = et
@@ -127,17 +147,23 @@ class OpenSeaBidder():
                         data: list = data.get("data")["eventActivity"]["edges"]
                         
                         offers: 'list[dict]' = []
-                        eventTimestamp = ""
+                        eventTimestamp = None
                         
                         for i in range(len(data)):
                             offer: dict = data[i]["node"]
                             
                             if i == 0:
                                 eventTimestamp = offer["eventTimestamp"]
-                            
-                            if self.blacklist.index(offer["collection"]["slug"]) != -1:
+                                time_passed_since_last_offer = (datetime.datetime.fromisoformat(eventTimestamp) - datetime.datetime.utcnow()).total_seconds()
+                                if time_passed_since_last_offer >= 60*60:
+                                    break 
+
+                            if offer["orderStatus"] == "EXPIRED" or offer["orderStatus"] == "ACCEPTED":
+                                continue
+
+                            if self.blacklist.__contains__(offer["collection"]["slug"]):
                                continue
-                            
+                           
                             if offer["perUnitPrice"].get("eth", 0) == 0:
                                 continue
                             
@@ -149,41 +175,64 @@ class OpenSeaBidder():
                                         "trait_value": offer["traitCriteria"]["value"],
                                         "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
                                         "quantity": offer["itemQuantity"],
-                                        "type": "collection"
+                                        "type": "trait",
+                                        "timestamp": offer["eventTimestamp"]
+                                        # "time": round(time())
                                     }
                                 )
-                            else:
+                            elif offer["eventType"] == "BID_ENTERED":
                                 offers.append({
                                     "tokenId": offer["item"]["tokenId"],
-                                    "tokenAddress": offer["assetContract"]["address"],
+                                    "tokenAddress": offer["item"]["assetContract"]["address"],
                                     "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
-                                    "type": "offer"
+                                    "type": "offer",
+                                    "timestamp": offer["eventTimestamp"]
+                                    # "time": round(time())
                                 })
+                            elif offer["eventType"] == "COLLECTION_OFFER":
+                                offers.append(
+                                    {
+                                        "slug": offer["collection"]["slug"],
+                                        "startAmount": float(offer["perUnitPrice"].get("eth", 0)) + self.eth_to_add,
+                                        "quantity": offer["itemQuantity"],
+                                        "type": "collection",
+                                        "timestamp": offer["eventTimestamp"]
+                                    }
+                                )
+                        
+                        if len(offers) == 0:
+                            return False, "No new offers", eventTimestamp
                         
                         return True, offers, eventTimestamp
-                
             except Exception as e:
-                return False, str(e), ""
+                return False, "Error while fetching new offers for this user " + f'"{account}"' + " Error: " + str(e), None
             
             sleep(randint(3, 6))
         
-        return False, "NO DATA & NO ERROR", ""
+        return False, "No new data", None
     
     def check_item_dont_exists(self, offer: dict, offers: 'list[dict]') -> 'tuple[bool, list]':
         for o in offers:
             if offer["type"] == "offer" and o["type"] == "offer":
                 if offer["tokenId"] == o["tokenId"] and offer["tokenAddress"] == o["tokenAddress"]:
-                    if offer["time"] + (60 * (self.exp_time + 3)) > round(time()):
+                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
                         return False, []
                     else:
                         offers = [_ for _ in offers if not (offer["tokenId"] == _["tokenId"] and offer["tokenAddress"] == _["tokenAddress"])]
                         return True, offers
-            else:
+            elif offer["type"] == "trait" and o["type"] == "trait":
                 if offer["slug"] == o["slug"] and offer["trait_type"] == o["trait_type"] and offer["trait_value"] == o["trait_value"]:
-                    if offer["time"] + (60 * (self.exp_time + 3)) > round(time()):
+                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
                         return False, []
                     else:
-                        offers = [_ for _ in offers if not (offer["tokenId"] == _["tokenId"] and offer["tokenAddress"] == _["tokenAddress"])]
+                        offers = [_ for _ in offers if not (offer["slug"] == _["slug"] and offer["trait_type"] == _["trait_type"] and offer["trait_value"] == _["trait_value"])]
+                        return True, offers
+            elif offer["type"] == "collection" and o["type"] == "collection":
+                if offer["slug"] == o["slug"]:
+                    if o.get("time", 0) + (60 * (self.exp_time + 3)) > round(time()):
+                        return False, []
+                    else:
+                        offers = [_ for _ in offers if not (offer["slug"] == _["slug"])]
                         return True, offers
         
         return True, offers
@@ -199,6 +248,11 @@ class OpenSeaBidder():
         filtered_offers = []
         
         for offer in offers:
+            
+            timestamp = offer["timestamp"]
+            if (datetime.datetime.fromisoformat(timestamp) - datetime.datetime.utcnow()).total_seconds() >= 60*60:
+                continue
+            
             success, unique_offers = self.check_item_dont_exists(offer, data)
             
             if success:
@@ -220,15 +274,19 @@ class OpenSeaBidder():
                 _["time"] = _time
             
             [data.append(offer) for offer in offers]
-            
+        
         with open("sent_offers.json", "w", encoding="utf8") as w_f:
             w_f.write(json.dumps(data))
     
+    def get_affordable_offers(self, offers: 'list[dict]') -> 'list[dict]':
+        return [offer for offer in offers if offer["startAmount"] <= self.max_weth_available]
+    
     def monitor_account(self, account: str) -> None:
         fr = True
-        et = ""
+        et = None
         
         while True:
+            print("Looking for new offers...")
             success, offers, eventTimestamp = self.get_offers(account, fr, et)
             
             if not success:
@@ -239,11 +297,16 @@ class OpenSeaBidder():
             et = eventTimestamp
             
             offers = self.filter_out_old_ones(offers)
-            offers_saving_time = round(time())
             
             if len(offers) == 0:
                 continue
             
+            offers = self.get_affordable_offers(offers)
+            
+            if len(offers) == 0:
+                continue
+            
+            offers_saving_time = round(time())
             self.save_new_offers(offers, offers_saving_time)
             
             Thread(target=self.send_offers, args=(offers, )).start()
@@ -252,6 +315,8 @@ class OpenSeaBidder():
             
             if time_to_wait > 0:
                 sleep(time_to_wait)
+            
+            sleep(randint(2, 4))
     
     def run(self):
         self.log(20, "Loading config & starting bot")
